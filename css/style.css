@@ -1,0 +1,255 @@
+:root {
+    --primary : #be6a15;
+    --secondary : rgba(107, 42, 42, 0.904);
+    --dark : #000000;
+    --light : #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary);
+    position: absolute;
+    top: 10px;
+}
+.navbar-brand {
+    transition: 0.5s ease;
+}
+.navbar-brand:hover {
+    color: var(--dark) !important;
+}
+.btn-menu {
+    background-color: var(--primary);
+    padding: 5px;
+}
+.btn-menu-icon-display {
+    display: none !important;
+}
+.navbar-nav {
+    display: flex !important;
+}
+.nav-link {
+    transition: 0.5s ease !important;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: var(--dark) !important;
+}
+
+/* Home */
+.home-row {
+    border-bottom: 1px solid var(--light) !important;
+    border-bottom-left-radius: 20% !important;
+    border-bottom-right-radius: 20% !important;
+}
+.btn-place-order, .btn-ph-no {
+    border-radius: 0 !important;
+    width: 150px !important;
+    transition: 0.5s ease !important;
+}
+.btn-place-order {
+    background-color: var(--primary) !important;
+}
+.btn-ph-no {
+    color: var(--primary) !important;
+    border: 1px solid var(--primary) !important;
+}
+.btn-place-order:hover {
+    background-color: #a55d16 !important;
+}
+.btn-ph-no:hover {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+}
+.chef-logo {
+    width: 400px;
+    height: 400px;
+}
+.home-images {
+    width: 300px;
+    height: 130px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+.home-images:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+}
+.slick-dots {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.slick-dots li {
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    background-color: transparent;
+}
+.slick-dots li.slick-active {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: var(--primary);
+}
+
+/* Card */
+.card-icons {
+    top: -20px;
+    left: 15px;
+    background-color: var(--primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.4s ease !important;
+    z-index: 10;
+}
+.card-icons:hover {
+    transform: scale(1.05);
+    background-color: #a55d16 !important;
+    cursor: pointer;
+}
+.read-more-link {
+    color: var(--primary) !important;
+}
+.cards-card-body {
+    transition: 0.5s ease;
+}
+.cards-card-body:hover {
+    transform: scale(0.98);
+}
+
+/* Divider */
+.divider {
+    width: 3px;
+    height: 3px;
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+.btn-divider-menu {
+    width: 150px !important;
+    background-color: var(--primary) !important;
+    transition: 0.5s ease;
+}
+.btn-divider-menu:hover {
+    background-color: #a55d16 !important;
+}
+
+/* Menu */
+.card-images {
+    padding: 5px;
+    width: 100% !important;
+    height: 500px;
+    border: 1px solid var(--primary) !important;
+}
+.menu-images {
+    width: 32% !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease;
+}
+.menu-images:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0.125rem 0.55rem rgba(0, 0, 0, 0.075) !important;
+}
+.menu-images-one {
+    background-image: url("../images/front-view-delicious-muffins-with-berries-white-table.jpg");
+}
+.menu-images-two {
+    background-image: url("../images/english-breakfast-toast-egg-bacon-vegetables-rustic-style-wooden-table.jpg");
+}
+.menu-images-three {
+    background-image: url("../images/drink-bottles-wooden-crate.jpg");
+}
+.btn-menu-place-order {
+    border-radius: 0 !important;
+    margin-bottom: 10px !important;
+    background-color: var(--primary) !important;
+    transition: 0.5s ease !important;
+}
+.btn-menu-place-order:hover {
+    background-color: #a55d16 !important;
+}
+.right-menu-list {
+    height: 500px !important;
+}
+.menu-lists {
+    color: var(--primary) !important;
+}
+.menu-list-text {
+    border: 1px solid var(--primary) !important;
+    border-left: 30px solid var(--primary) !important;
+    padding: 5px 15px !important;
+}
+.menu-list-text p {
+    font-size: 1.4em;
+}
+.input-search {
+    border-radius: 0 !important;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+}
+.input-group-text {
+    border-radius: 0 !important;
+    border: 1px solid var(--primary) !important;
+    background-color: var(--primary) !important;
+    transition: 0.5s ease;
+}
+.input-group-text:hover {
+    background-color: #a55d16 !important;
+    cursor: pointer;
+}
+
+/* Contact us */
+.btn-send {
+    background-color: var(--primary) !important;
+    transition: 0.5s !important;
+}
+.btn-send:hover {
+    background-color: #a55d16 !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+}
+.footer-row {
+    height: 350px !important;
+}
+.footer-card {
+    border: 1px solid var(--light) !important;
+    padding: 10px !important;
+}
+/* ===================================================================== */
+
+/* Responsive for mobile, mini-tablet */
+@media (max-width:850px) {
+    .btn-menu-icon-display {
+        display: flex !important;
+    }
+    .navbar-nav {
+        display: none !important;
+    }
+    .show-menu {
+        display: flex !important;
+        width: 100% !important;
+    }
+    .chef-logo {
+        width: 200px;
+        height: 200px;
+    }
+    .home-images {
+        height: 200px !important;
+    }
+    .footer-row {
+        height: 100% !important;
+    }
+}

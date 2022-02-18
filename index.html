@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Breakfast</title>
+    <style>
+        .loader-container {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loader,
+        .loader:before,
+        .loader:after {
+        border-radius: 50%;
+        }
+        .loader {
+        color: #be6a15;
+        font-size: 11px;
+        text-indent: -99999em;
+        margin: 55px auto;
+        position: relative;
+        width: 10em;
+        height: 10em;
+        box-shadow: inset 0 0 0 1em;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        }
+        .loader:before,
+        .loader:after {
+        position: absolute;
+        content: '';
+        }
+        .loader:before {
+        width: 5.2em;
+        height: 10.2em;
+        background: #ffffff;
+        border-radius: 10.2em 0 0 10.2em;
+        top: -0.1em;
+        left: -0.1em;
+        -webkit-transform-origin: 5.1em 5.1em;
+        transform-origin: 5.1em 5.1em;
+        -webkit-animation: load2 2s infinite ease 1.5s;
+        animation: load2 2s infinite ease 1.5s;
+        }
+        .loader:after {
+        width: 5.2em;
+        height: 10.2em;
+        background: #ffffff;
+        border-radius: 0 10.2em 10.2em 0;
+        top: -0.1em;
+        left: 4.9em;
+        -webkit-transform-origin: 0.1em 5.1em;
+        transform-origin: 0.1em 5.1em;
+        -webkit-animation: load2 2s infinite ease;
+        animation: load2 2s infinite ease;
+        }
+        @-webkit-keyframes load2 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes load2 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/animate/animate.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="container-fluid header wow animate__slideInDown" id="header">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-10 mx-auto">
+                        <nav class="navbar navbar-expand-lg justify-content-between align-items-center">
+                            <a href="#" class="navbar-brand text-white">
+                                Logo
+                            </a>
+                            <button class="btn d-flex d-lg-none btn-menu-icon-display" id="showMenu">
+                                <i class="feather-menu text-warning fs-1"></i>
+                            </button>
+                            <ul class="navbar-nav" id="navbarNav">
+                                <li class="nav-item mx-2">
+                                    <a href="#home" class="nav-link text-white"> Home </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#home" class="nav-link text-white"> Kitchen </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#cards" class="nav-link text-white"> Ingredients </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#menu" class="nav-link text-white"> Recipes </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#menu" class="nav-link text-white"> Prices </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#contact" class="nav-link text-white"> Contact </a>
+                                </li>
+                            </ul>
+                            <div class="btn-menu">
+                                <a href="" class="btn text-white"> Login </a>
+                                <a href="" class="btn btn-dark"> Signup </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section class="container-fluid home mb-5" id="home">
+        <div class="row">
+            <div class="container">
+                <div class="row min-vh-100 home-row shadow-sm justify-content-center align-items-center">
+                    <!-- Left Text-->
+                    <div class="col-12 mt-5 mt-lg-0 col-lg-7 d-flex justify-content-between align-items-center wow animate__slideInLeft animate__slow">
+                        <div>
+                            <h4 class="text-uppercase fw-light"> Realtime </h4>
+                            <h1 class="text-uppercase"> Breakfast Time </h1>
+                            <p class="text-black-50">
+                                You stay efficient and active 
+                                <br>
+                                onces you have a great breakfast.
+                            </p>
+                            <div>
+                                <a href="" class="btn btn-place-order text-white fw-bold"> Place Order </a>
+                                <a href="" class="btn btn-ph-no fw-bold mt-3  mt-md-0">
+                                    <i class="feather-phone"></i>
+                                    09 445627818
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/detailed-chef-logo-template/5526265.jpg" class="chef-logo" alt="">
+                        </div>
+                    </div>
+                    <!-- Right Photos -->
+                    <div class="col-12 col-lg-3 wow animate__slideInRight animate__slow">
+                        <div class="d-flex flex-column align-items-center slick-img">
+                            <img src="images/basil-minced-pork-with-rice-fried-egg.jpg" class="home-images" alt="">
+                            <img src="images/breakfast-set-with-various-food.jpg" class="home-images" alt="">
+                            <img src="images/crispy-tubtim-fish-salad-thai-food-herb.jpg" class="home-images" alt="">
+                            <img src="images/basil-minced-pork-with-rice-fried-egg.jpg" class="home-images" alt="">
+                            <img src="images/breakfast-set-with-various-food.jpg" class="home-images" alt="">
+                            <img src="images/crispy-tubtim-fish-salad-thai-food-herb.jpg" class="home-images" alt="">
+                            <img src="images/basil-minced-pork-with-rice-fried-egg.jpg" class="home-images" alt="">
+                            <img src="images/breakfast-set-with-various-food.jpg" class="home-images" alt="">
+                            <img src="images/crispy-tubtim-fish-salad-thai-food-herb.jpg" class="home-images" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="container-fluid cards mb-5" id="cards">
+        <div class="row col-12 col-lg-10 mx-lg-auto">
+            <div class="container">
+                <div class="row justify-content-center align-items-center my-4">
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 position-relative wow animate__zoomIn animate__slow">
+                            <div class="position-absolute card-icons">
+                                <i class="feather-shopping-cart text-white fs-4"></i>
+                            </div>
+                            <div class="card-body border rounded shadow-sm cards-card-body">
+                                <p class="text-black-50 mt-4">
+                                    Dessert dessert I love donut
+                                    <br>
+                                    croissant liquorice gummi
+                                    <br>
+                                    bears donut I love.Pudding I 
+                                    <br>
+                                    love powder souffle candy
+                                </p>
+                                <a href="#" class="text-decoration-none read-more-link">
+                                    Readmore <i class="feather-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 position-relative wow animate__zoomIn animate__slow">
+                            <div class="position-absolute card-icons">
+                                <i class="feather-shopping-cart text-white fs-4"></i>
+                            </div>
+                            <div class="card-body border rounded shadow-sm cards-card-body">
+                                <p class="text-black-50 mt-4">
+                                    Dessert dessert I love donut
+                                    <br>
+                                    croissant liquorice gummi
+                                    <br>
+                                    bears donut I love.Pudding I 
+                                    <br>
+                                    love powder souffle candy
+                                </p>
+                                <a href="#" class="text-decoration-none read-more-link">
+                                    Readmore <i class="feather-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 position-relative wow animate__zoomIn animate__slow">
+                            <div class="position-absolute card-icons">
+                                <i class="feather-shopping-cart text-white fs-4"></i>
+                            </div>
+                            <div class="card-body border rounded shadow-sm cards-card-body">
+                                <p class="text-black-50 mt-4">
+                                    Dessert dessert I love donut
+                                    <br>
+                                    croissant liquorice gummi
+                                    <br>
+                                    bears donut I love.Pudding I 
+                                    <br>
+                                    love powder souffle candy
+                                </p>
+                                <a href="#" class="text-decoration-none read-more-link">
+                                    Readmore <i class="feather-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section class="container-fluid divider position-relative mb-5">
+        <a href="#" class="btn btn-divider-menu text-white fw-bold position-absolute top-50 start-50 translate-middle"> Our Menus </a>
+    </section>
+
+    <!-- Menu -->
+    <section class="container-fluid menu mb-5" id="menu">
+        <div class="row">
+            <div class="container">
+                <div class="row justify-content-center align-items-center my-5">
+                    <!-- Left Menu Images -->
+                    <div class="col-12 col-lg-5 wow animate__slideInLeft animate__slow">
+                        <div class="card card-images shadow-sm d-flex flex-row justify-content-around">  <!-- bootstrap card d-flex default is flex-column -->
+                            <div class="menu-images menu-images-one">
+                                <a href="#" class="btn btn-menu-place-order text-white fw-bold"> Place Order </a>
+                            </div>
+                            <div class="menu-images menu-images-two">
+                                <a href="#" class="btn btn-menu-place-order text-white fw-bold"> Place Order </a>
+                            </div>
+                            <div class="menu-images menu-images-three">
+                                <a href="#" class="btn btn-menu-place-order text-white fw-bold"> Place Order </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Menu lists -->
+                    <div class="col-12 my-3 my-lg-0 col-lg-5 right-menu-list d-flex flex-column justify-content-between wow animate__slideInRight animate__slow">
+                        <div class="card menu-list-text">
+                            <p class="mb-0">
+                                We use great fresh ingredients,traditional
+                                <br>
+                                kitchen cooking methods and classic recipes
+                                <br>
+                                all day every day.
+                            </p>
+                        </div>
+                        <div class="d-flex mt-3 mt-lg-0 justify-content-between menu-lists">
+                            <div>
+                                <h4> Morning Specalities </h4>
+                                <hr>
+                                <p> Fruity Pancakes </p>
+                                <p> Fiorrence Benedict </p>
+                                <p> French Siam </p>
+                                <p> Vegetarian Breakfast </p>
+                                <p> Crack-a-Jack </p>
+                                <p> Hearty Breakfast</p>
+                            </div>
+                            <div>
+                                <h4> Traditional Favourites </h4>
+                                <hr>
+                                <p> Fruity Pancakes </p>
+                                <p> Fiorrence Benedict </p>
+                                <p> French Siam </p>
+                                <p> Vegetarian Breakfast </p>
+                                <p> Crack-a-Jack </p>
+                                <p> Hearty Breakfast</p>
+                            </div>
+                        </div>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control input-search" placeholder=" Search somethings... " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text text-white px-4" id="basic-addon2">Search</span>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section class="container-fluid divider position-relative mb-5">
+        <a href="#" class="btn btn-divider-menu text-white fw-bold position-absolute top-50 start-50 translate-middle"> Contact Us </a>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="container-fluid contact mb-5" id="contact">
+        <div class="row">
+            <div class="container">
+                <div class="row justify-content-center align-items-center mt-4">
+                    <!-- Form -->
+                    <div class="col-12 col-lg-5 wow animate__slideInLeft animate__slow">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <label for="name" class="form-label"> Enter your name </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                                <label for="email" class="form-label"> Enter your Email </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea name="" class="form-control" style="height: 150px;" placeholder="Type something..." id="review" cols="30" rows="10"></textarea>
+                                <label for="review" class="form-label"> Type something... </label>
+                            </div>
+                            <button class="btn btn-send text-white mb-3 px-4 fw-bold">
+                                <i class="feather-send me-1"></i>Send
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Google Map -->
+                    <div class="col-12 col-lg-5 wow animate__slideInRight animate__slow">
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14201.701239605043!2d96.26835729909676!3d19.475191310953342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c8a83b8b6dd403%3A0xd7682890f70ea20e!2sYae%20Ni%20Railway%20Station!5e0!3m2!1sen!2smm!4v1645095748803!5m2!1sen!2smm" width="100%" height="365" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid footer" id="footer">
+        <div class="row">
+            <div class="container">
+                <div class="row footer-row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-5">
+                        <div class="card mt-3 footer-card bg-transparent flex-row justify-content-between">
+                            <div >
+                                <h6 class="text-decoration-underline fw-bold"> Opening Hours </h6>
+                                <p>
+                                    We are open Monday to Sunday.
+                                </p>
+                                <h6 class="fw-bold"> Monday - Sunday </h6>
+                                <p> From 9:00am - 8:00pm </p>
+                                <hr>
+                                <p>
+                                    Free Delivery to Office and Schools
+                                    <br>
+                                    around Yeni.
+                                </p>
+                            </div>
+                            <div>
+                                <h6 class="text-decoration-underline fw-bold">Contact Us</h6>
+                                <p> Ywar Line Pine , No.2 Division </p>
+                                <p> Railway station street. </p>
+                                <p> Yedashe, Yeni </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 my-3 col-lg-5 d-flex justify-content-center align-items-center">
+                        <div>
+                            <h4 class="text-uppercase fw-bold"> Realtime </h4>
+                            <h1 class="text-uppercase fw-bold"> Breakfast </h1>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
+                        <h6>&copy; Copyright</h6>
+                        <h6> Design By <a href="https://github.com/KgKyawHtin-333" target="_blank"> KgKyawHtin-333 </a> </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="vendor/bootstrap/jquery.min.js"></script>
+    <script src="vendor/slick/slick.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
